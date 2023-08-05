@@ -16,10 +16,18 @@
   }
 </script>
 <script src="https://unpkg.com/@croquet/croquet@1.0.5"></script>
-<link rel="stylesheet" href="./styles/index.processed.css">
 </head>
-<body style="font-family:Verdana,sans-serif">
+<body style="font-family:Verdana,sans-serif" onload="vdo()">
   <canvas id="cubes" touch-action="none" style="width:100%;height:100%"></canvas>
+  <iframe id="vdo" allow="autoplay;camera;microphone" style="width:150px;height:100%;z-index:99999"></iframe>
   <script type="module" src="cubes.js"></script>
+  <script>
+    function vdo() {
+      const params=new URLSearchParams(window.location.search);
+      const thisSessionId=params.get("q");
+      const vdo=document.getElementById("vdo");
+      vdo.src="https://vdo.ninja/?room=chalculator_" + thisSessionId + "&transparent"
+    }
+  </script>
 </body>
 </html>

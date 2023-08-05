@@ -561,7 +561,8 @@ class CubesView extends Croquet.View {
 session = Croquet.Session.join({
   appId: "us.numero.cubes",
   apiKey: "1m5nMszAACuG8f9ADpq6F25PrIb5LhyHlx6rjDHbd",
-  name: Croquet.App.autoSession(), //"Cubissimo",
+  //apiKey: "1fe9JcnxEtqebmrahC10k5JnoeahGpNs4sKFmGbxl", //production
+  name: Croquet.App.autoSession(),
   password: "paint",
   model: CubesModel,
   view: CubesView
