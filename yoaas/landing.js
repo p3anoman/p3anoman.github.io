@@ -138,7 +138,7 @@ function updateNick(evt) {
     }
 
     let joinState = nickname.textContent.length === 0 ? "Inactive" : "Active";
-
+console.log("Join State =}" + joinState);
     elements.initials.textContent = initialsFrom(nickname.textContent);
     setState(elements.joinButton, joinState);
 }
