@@ -51,7 +51,7 @@ jobs:
         with:
           node-version: 20
           
-      - name: Setuo croquet.js
+      - name: Setup croquet.js
         run: |
           npm run setup
 
