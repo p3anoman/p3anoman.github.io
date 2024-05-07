@@ -1,2 +1,2 @@
-const apiKey = "1fe9JcnxEtqebmrahC10k5JnoeahGpNs4sKFmGbxl"; //production
+const apiKey = "1DD1CDqjxamKuNOz90a87Fyh8CJEPBt19ElINvhva"; //production
 export default apiKey;
