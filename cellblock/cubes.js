@@ -6,18 +6,10 @@ const FLD_W_SQ = 81;
 const CUBE_W = 100; //Pixel width of a block
 const OFFSET = Math.floor((FLD_W * CUBE_W) / 2);
 const BOX = new THREE.BoxGeometry(CUBE_W, CUBE_W, CUBE_W);
-const SIDE3 = new THREE.MeshBasicMaterial({
-  map: new THREE.TextureLoader().load("./pics/3.png")
-});
-const SIDE9 = new THREE.MeshBasicMaterial({
-  map: new THREE.TextureLoader().load("./pics/9.png")
-});
-const SIDE27 = new THREE.MeshBasicMaterial({
-  map: new THREE.TextureLoader().load("./pics/27.png")
-});
-const SIDE81 = new THREE.MeshBasicMaterial({
-  map: new THREE.TextureLoader().load("./pics/81.png")
-});
+const SIDE3 = new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load("./pics/3.png") });
+const SIDE9 = new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load("./pics/9.png") });
+const SIDE27 = new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load("./pics/27.png") });
+const SIDE81 = new THREE.MeshBasicMaterial({ map: new THREE.TextureLoader().load("./pics/81.png") });
 const BLANK = new THREE.MeshBasicMaterial({
   map: new THREE.TextureLoader().load("./pics/blank.png"),
   color: 0xffffff,
@@ -27,18 +19,9 @@ const BLANK = new THREE.MeshBasicMaterial({
 
 let session;
 
-function blockIndex(x, y, z) {
-  return x + y * FLD_W + z * FLD_W_SQ;
-}
+function blockIndex(x, y, z) { return x + y * FLD_W + z * FLD_W_SQ; }
 
-const cubistColors = [
-  "#880000",
-  "#008800",
-  "#000088",
-  "#228800",
-  "#002288",
-  "#880022"
-];
+const cubistColors = [ "#880000", "#008800", "#000088", "#228800", "#002288", "#880022" ];
 var usedColors = [];
 
 class Cubist {
@@ -559,9 +542,9 @@ class CubesView extends Croquet.View {
 }
 
 session = Croquet.Session.join({
-  appId: "us.numero.cubes",
-  apiKey: "1m5nMszAACuG8f9ADpq6F25PrIb5LhyHlx6rjDHbd",
-  //apiKey: "1fe9JcnxEtqebmrahC10k5JnoeahGpNs4sKFmGbxl", //production
+  appId: "com.chalculator.cubes",
+  //apiKey: "1m5nMszAACuG8f9ADpq6F25PrIb5LhyHlx6rjDHbd",
+  apiKey: "1fe9JcnxEtqebmrahC10k5JnoeahGpNs4sKFmGbxl", //production
   name: Croquet.App.autoSession(),
   password: "paint",
   model: CubesModel,
